@@ -7,7 +7,7 @@ dotenv.config()
 
 const MiniCmpt=({data,indexKey,replay,replayAva})=>{
     const [rePlaySearch,setRePlaySearch]=useState("");
-    const socket = io(process.env.Back_Socket_Url);
+    const socket = io(process.env.Back_End_Socket_Api_Url);
     useEffect(()=>{
   
     },[])

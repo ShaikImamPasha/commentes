@@ -7,7 +7,7 @@ import MiniCmpt from "./MiniCmpt";
 const CommentApp = () => {
   const [commentsData, setCommentsData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const socket = io(process.env.Back_Socket_Url);
+  const socket = io(process.env.Back_End_Socket_Api_Url);
 
   useEffect(() => {
 
