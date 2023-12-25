@@ -5,7 +5,7 @@ import MiniCmpt from "./MiniCmpt";
 const CommentApp = () => {
   const [commentsData, setCommentsData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const socket = io("https://kind-puce-bull-tie.cyclic.app/socket");
+  const socket = io("https://commentes-back-end.vercel.app");
 
   useEffect(() => {
 

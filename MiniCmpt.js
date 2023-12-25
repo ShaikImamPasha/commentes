@@ -4,7 +4,7 @@ import io from "socket.io-client";
 
 const MiniCmpt=({data,indexKey,replay,replayAva})=>{
     const [rePlaySearch,setRePlaySearch]=useState("");
-    const socket = io("https://kind-puce-bull-tie.cyclic.app/socket");
+    const socket = io("https://commentes-back-end.vercel.app");
     useEffect(()=>{
   
     },[])
