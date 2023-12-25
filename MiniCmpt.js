@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { ComponentFun } from "./ComponentFun";
 import io from "socket.io-client";
+import dotenv from 'dotenv';
+dotenv.config()
+
 
 const MiniCmpt=({data,indexKey,replay,replayAva})=>{
     const [rePlaySearch,setRePlaySearch]=useState("");
-    const socket = io("https://commentes-back-end.vercel.app");
+    const socket = io(process.env.Back_Socket_Url);
     useEffect(()=>{
   
     },[])

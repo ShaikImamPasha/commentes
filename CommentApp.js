@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import io, { Socket } from "socket.io-client";
 import { ComponentFun } from "./ComponentFun";
+import dotenv from 'dotenv';
+dotenv.config()
 import MiniCmpt from "./MiniCmpt";
 const CommentApp = () => {
   const [commentsData, setCommentsData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const socket = io("https://commentes-back-end.vercel.app");
+  const socket = io(process.env.Back_Socket_Url);
 
   useEffect(() => {
 
@@ -18,6 +20,7 @@ const CommentApp = () => {
     });
     // Listen for new comments
     socket.on('newComment', (newComment) => {
+      console.log("new",newComment);
        setCommentsData(newComment)
     });
 
