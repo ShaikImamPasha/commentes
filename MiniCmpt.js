@@ -13,7 +13,7 @@ const MiniCmpt=({data,indexKey,replay,replayAva})=>{
     },[])
   function fun(){
     socket.emit('addReply', {
-        restaurantId: 111,
+        restaurantId: 212,
         commentIndex:replayAva===true?replay:indexKey,
         newReply: {
           name: "pasha",

@@ -11,7 +11,7 @@ const CommentApp = () => {
 
   useEffect(() => {
 
-    socket.emit('requestInitialData', { restaurantId: 111 });
+    socket.emit('requestInitialData', { restaurantId: 212 });
 
     // Listen for the initial data response from the server
     socket.on('initialData', (initialData) => {
@@ -38,7 +38,7 @@ const CommentApp = () => {
   const pushComment = () => {
     // Emit a socket event to add a new comment
     socket.emit('addComment', {
-      restaurantId: 111,
+      restaurantId: 212,
       newComment: {
         name: "imam",
         message: searchValue,
